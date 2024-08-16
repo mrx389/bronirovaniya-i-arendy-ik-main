@@ -1,0 +1,73 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Users {
+  id                Int             @id @default(autoincrement())
+  name              String?
+  email             String          @unique
+  password          String
+  role              Role            @default(USER)
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+}
+
+model Applications {
+  id                Int             @id @default(autoincrement())
+  name             String
+  phone             String
+  dayFrom             String
+  dayTo             String
+  paymentMethod             String
+  processed         Boolean         @default(false)
+  approved         Boolean         @default(false)
+  RentalItemId      Int
+  rentalItem        RentalItems     @relation(fields: [RentalItemId], references: [id])
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+}
+
+model RentalItems {
+  id                Int             @id @default(autoincrement())
+  title             String
+  price             String
+  description             String
+  dayFrom           String
+  dayTo             String
+  day               Int
+  image             String
+  application       Applications[]
+  RentId            Int
+  rent              Rents     @relation(fields: [RentId], references: [id])
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+}
+
+model Rents {
+  id                Int             @id @default(autoincrement())
+  address           String
+  price             String
+  image             String
+  rentalItems       RentalItems[]
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+}
+
+model Reviews {
+  id                Int             @id @default(autoincrement())
+  name              String
+  avatar            String
+  review            String
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+}
+
+enum Role {
+  USER
+  ADMIN
+}

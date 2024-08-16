@@ -1,0 +1,38 @@
+{
+  "name": "buid2024",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prisma-seed": "tsx prisma/seeds.ts"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "classnames": "~2.3.2",
+    "jsonwebtoken": "^9.0.2",
+    "next": "14.2.3",
+    "next-auth": "^4.24.7",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-slick": "^0.30.2",
+    "sass": "~1.66.1",
+    "slick-carousel": "^1.8.1",
+    "tsx": "^4.9.1"
+  },
+  "devDependencies": {
+    "@prisma/client": "^5.14.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-slick": "^0.23.13",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "prisma": "^5.14.0",
+    "typescript": "^5"
+  }
+}
