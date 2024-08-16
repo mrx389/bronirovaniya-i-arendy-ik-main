@@ -1,0 +1,29 @@
+$breakpoint-mb: 370px;
+$breakpoint-tb: 720px;
+$breakpoint-lp: 1024px;
+$breakpoint-ds: 1440px;
+
+
+@mixin mobil {
+  @media screen and (max-width: $breakpoint-mb) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $breakpoint-mb) and (max-width: $breakpoint-tb) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: $breakpoint-tb) and (max-width: $breakpoint-lp) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $breakpoint-lp) and (max-width: $breakpoint-ds) {
+    @content;
+  }
+}

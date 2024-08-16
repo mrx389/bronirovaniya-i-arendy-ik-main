@@ -1,0 +1,110 @@
+@import "../mixin";
+
+.wrapperOpenWorld {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 135px;
+}
+
+.wrapperCriteria {
+  width: 100%;
+  height: 700px;
+  padding: 0 135px;
+}
+
+.wrapperReceipts {
+  margin: 80px 0;
+  padding: 0 112px;
+}
+
+.wrapperOffers {
+  padding: 80px 112px;
+  background: rgba(241, 89, 43, 0.2);
+}
+
+.wrapperBooksSold, .wrapperCollection {
+  height: 500px;
+  padding: 42px 112px;
+  margin-bottom: 120px;
+}
+
+.wrapperCollection {
+  margin-bottom: 135px;
+}
+
+.wrapperComments {
+  height: 443px;
+}
+
+.wrapperRequest {
+  height: auto;
+}
+
+.listInfo {
+  width: 100%;
+  max-width: 530px;
+  height: 180px;
+  border-radius: 15px;
+  background: #AE1919;
+  padding: 30px;
+  display: grid;
+  place-items: flex-start;
+  position: absolute;
+  right: 60px;
+  top: -100px;
+
+  @include laptop {
+    max-width: 540px;
+    height: 160px;
+    left: 50%;
+    top: -35px;
+    transform: translate(-50%, -50%);
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobil {
+    display: none;
+  }
+}
+
+.textList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  column-gap: 10px;
+  color: #fff;
+}
+
+.shadow {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(17, 17, 17, 0.5);
+  z-index: 10;
+}
+
+.application {
+  display: block;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+}
+
+.shadowNot,  .applicationNot{
+  display: none;
+}

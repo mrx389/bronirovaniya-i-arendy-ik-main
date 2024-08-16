@@ -1,0 +1,23 @@
+.wrapperProfile {
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px auto;
+}
+
+.imgProfile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.nameProfile {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 0.5px;
+  color: #36384E;
+  margin: 24px 0 64px;
+}
